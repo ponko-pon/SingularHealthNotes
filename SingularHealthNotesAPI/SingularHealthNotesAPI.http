@@ -1,0 +1,6 @@
+@SingularHealthNotesAPI_HostAddress = http://localhost:5290
+
+GET {{SingularHealthNotesAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
