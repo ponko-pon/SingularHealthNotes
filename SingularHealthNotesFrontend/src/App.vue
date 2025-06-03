@@ -1,13 +1,13 @@
 <template>
   <v-app fluid>
     <v-app-bar title="Scan Test"></v-app-bar>
-    <SidebarComponent :scans="scans" @select-scan="handleScanSelect"></SidebarComponent>
+    <ScanSidebar :scans="scans" @select-scan="handleScanSelect"></ScanSidebar>
     <ScanView :scan="selectedScan" @refresh-scan="reloadAndRefreshScans"></ScanView>
   </v-app>
 </template>
 
 <script setup lang="ts">
-import SidebarComponent from './components/SidebarComponent.vue'
+import ScanSidebar from './components/ScanSidebar.vue'
 import { scanService } from './services/apiService';
 import type { Scan } from './types/Scan'
 import ScanView from './views/ScanView.vue'
